@@ -1167,6 +1167,14 @@ footer {
     border-radius: 12px;
     background-color: silver;
     margin-bottom: 12px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .desc {
+    span {
+      font-weight: 500;
+    }
   }
 }
 

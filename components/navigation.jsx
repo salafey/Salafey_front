@@ -62,7 +62,7 @@ export default function NavBar() {
 function IconMenu({ statut }) {
   if (statut === false) {
     return (
-      <svg class="iconMenu" width="36" height="36" viewBox="0 0 512 512">
+      <svg className="iconMenu" width="36" height="36" viewBox="0 0 512 512">
         <path
           fill="none"
           stroke="currentColor"

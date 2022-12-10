@@ -8,18 +8,24 @@ import Titre, {
 import { hygraph } from '../api/hygraph';
 
 export default function Actualite({ articlesBlogs }) {
-  const ArticleListe = () => {
+  console.log(articlesBlogs);
+  const ArticleListe = (
     <div className="grid">
-      {articlesBlogs.map((el, key) => {
-        const { id, titre, slug, firstImage } = el;
-        <ArticleItems titre={titre} id={id} image={firstImage.url} />;
-      })}
-    </div>;
-  };
+      {articlesBlogs.map((el, key) => (
+        <ArticleItems
+          titre={el.titre}
+          id={el.id}
+          image={el.firstImage.url}
+          key={key}
+          publier={el.createdAt}
+        />
+      ))}
+    </div>
+  );
 
   return (
     <div>
-      <section class="bannierePage">
+      <section className="bannierePage">
         <EventProche
           image={'https://media.graphassets.com/YZnN3sfyTDutBtshvwFP'}
         />
@@ -44,7 +50,7 @@ export default function Actualite({ articlesBlogs }) {
               Aucun articles pour le moment
             </div>
           ) : (
-            ArticleListe()
+            ArticleListe
           )}
         </div>
       </section>
@@ -77,17 +83,43 @@ function EventProche({ image }) {
 }
 
 function ArticleItems({ image, titre, publier, id }) {
+  const datePubliched = new Date(publier);
+  const FormatDate = () => {
+    const mois = [
+      'Janvier',
+      'Février',
+      'Mars',
+      'Avril',
+      'Mai',
+      'Juin',
+      'Juillet',
+      'Août',
+      'Septembre',
+      'Octobre',
+      'Novembre',
+      'Décembre',
+    ];
+
+    const moisPublished = mois[datePubliched.getMonth()];
+    const day =
+      datePubliched.getDate() < 10
+        ? `0${datePubliched.getDate()}`
+        : datePubliched.getDate();
+
+    return `${day} ${moisPublished} ${datePubliched.getFullYear()}`;
+  };
+
   return (
     <div className="articleItems">
       <div
         className="image"
         style={{
-          backgroundImage: image,
+          backgroundImage: `url(${image})`,
         }}
       ></div>
       <div className="desc">
         <SousTitre_2>{titre}</SousTitre_2>
-        <span>{publier}</span>
+        <span>Publié le : {FormatDate()}</span>
       </div>
     </div>
   );
@@ -96,19 +128,20 @@ function ArticleItems({ image, titre, publier, id }) {
 const QUERY = gql`
 {
   articlesBlogs {
-    id
     titre
     slug
+    id
     firstImage {
       url
     }
+    publishedAt
+    createdAt
   }
 }
 `;
 
 export async function getServerSideProps() {
   const { articlesBlogs } = await hygraph.request(QUERY);
-
   return {
     props: {
       articlesBlogs,
