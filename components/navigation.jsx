@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { image } from './image';
+import { image, logo } from './image';
 import Link from 'next/link';
 
 export default function NavBar() {
@@ -13,7 +13,7 @@ export default function NavBar() {
       <div className="container">
         <Link href={'/'} className="logo">
           <div>
-            <img src={image} width={'100%'} alt="salafey logo" />
+            <img src={logo } width={'100%'} alt="salafey logo" />
           </div>
         </Link>
         <div className="menu">
