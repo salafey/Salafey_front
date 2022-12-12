@@ -13,7 +13,7 @@ export default function NavBar() {
       <div className="container">
         <Link href={'/'} className="logo">
           <div>
-            <img src={logo } width={'100%'} alt="salafey logo" />
+            <img src={logo} width={'100%'} alt="salafey logo" />
           </div>
         </Link>
         <div className="menu">
@@ -21,7 +21,7 @@ export default function NavBar() {
             À Propos de nous
           </Link>
           <Link href={'/evenements'} className="menuElement">
-            Evenements
+            Évènements
           </Link>
           <Link href={'/actualites'} className="menuElement">
             Actualites

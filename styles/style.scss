@@ -30,6 +30,13 @@
   }
 }
 
+.soutitre {
+  font-size: 18px;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
 a {
   text-decoration: none;
 }
@@ -110,7 +117,7 @@ body {
     align-items: center;
     justify-content: space-between;
     .logo {
-      width: 92px;
+      width: 120px;
       height: 58px;
 
       display: flex;
@@ -305,6 +312,44 @@ footer {
       line-height: 2.4rem;
       color: white;
       // text-shadow: 0 0 50px black;
+    }
+
+    .right {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      h1 {
+        font-size: 3rem;
+        color: white;
+        margin: 0;
+      }
+
+      .button {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+
+        & > span {
+          font-weight: 500;
+          color: white;
+          font-size: 24px;
+          font-weight: 700;
+        }
+      }
+
+      button {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
     }
   }
 

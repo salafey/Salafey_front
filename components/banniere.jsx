@@ -2,8 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import Titre from './titre';
 import { SavoirPlus } from './bouton';
 
-export function Banniere({ data }) {
-  const { title, paragraph, banniereLink, banniereImage } = data[0];
+export function Banniere({ data, children }) {
+  const { banniereImage } = data[0];
   const [position, setPosition] = useState(-100);
 
   useEffect(() => {
@@ -25,11 +25,7 @@ export function Banniere({ data }) {
       }}
     >
       <div className="container">
-        <div className="banniereContent">
-          <Titre style={{ color: 'white' }}>{title}</Titre>
-          <h3>{paragraph}</h3>
-          <SavoirPlus href={'/'} />
-        </div>
+        <div className="banniereContent">{children}</div>
       </div>
     </section>
   );

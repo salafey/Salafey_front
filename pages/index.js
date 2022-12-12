@@ -2,12 +2,18 @@ import { useEffect, useState, useRef } from 'react';
 import Head from 'next/head';
 import { gql } from 'graphql-request';
 
+
+
 import Apropos from '../components/apropos';
 import { Banniere } from '../components/banniere';
 import { hygraph } from './api/hygraph';
 import EventsComponent, { SpecialEvent } from '../components/event';
 
-import Titre, { SousTitre_2, SousTitre_1 } from '../components/titre';
+import Titre, {
+  SousTitre_2,
+  SousTitre_1,
+  Grand_Titre,
+} from '../components/titre';
 import ActusItem from '../components/actus';
 import Livre from '../components/livre';
 import Contact from '../components/contact';
@@ -21,6 +27,10 @@ export default function Home({
   const data1 = eventDays[eventDays.length - 1];
   const data2 = eventDays[eventDays.length - 2];
 
+  // setInterval(() => {
+  //   CountDown().;
+  // }, 1000);
+ 
   const handleLivre = () => {
     const result = [];
     for (let i = 0; i <= 6; i++) {
@@ -36,7 +46,31 @@ export default function Home({
     <>
       <Head></Head>
       <main>
-        <Banniere data={bannierePrincipales} />
+        <Banniere data={bannierePrincipales}>
+          <div className="right">
+            <Grand_Titre style={{ color: 'white' }}>Salafey</Grand_Titre>
+            <h1>2022</h1>
+            <span className="soutitre">
+              SALON DU LIVRE AFRICAIN <br /> POUR ENFANTS DE YAOUNDÉ
+            </span>
+
+            <div className={'button'}>
+              <span>Avoir plus d'Information</span>
+              <button>
+                <svg width="32" height="32" viewBox="0 0 512 512">
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="48"
+                    d="m268 112l144 144l-144 144m124-144H100"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </Banniere>
         <section>
           <Apropos />
         </section>

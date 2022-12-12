@@ -1,5 +1,6 @@
 import { EventPartenaire } from '../../components/apropos';
 import { Banniere_second } from '../../components/banniere';
+import Contact from '../../components/contact';
 import { EvenIntro, EventComponent_2 } from '../../components/event';
 import Paragraph from '../../components/paragraph';
 import TeamMember from '../../components/team';
@@ -288,6 +289,7 @@ export default function Apropos() {
           </div>
         </div>
       </section>
+      <Contact />
     </div>
   );
 }

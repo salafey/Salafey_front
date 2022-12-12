@@ -1,9 +1,12 @@
+import { useState, useEffect } from 'react';
 import { displayContent } from 'next/dist/client/dev/fouc';
 import Contact from '../../components/contact';
 import { Event } from '../../components/event';
 import Titre, { Grand_Titre, SousTitre_1 } from '../../components/titre';
 import { Vide } from '../../components/vide';
 import Data from './event.json';
+
+import { CountDown } from '../../constantes/countdown';
 
 export default function Evenement() {
   return (
@@ -36,6 +39,20 @@ export default function Evenement() {
 }
 
 export function EventProche({ image }) {
+  const [day, setDay] = useState(0);
+  const [hours, setHours] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    setInterval(() => {
+      setDay(CountDown('Dec 16, 2022 12:00:00').day);
+      setHours(CountDown('Dec 16, 2022 12:00:00').hours);
+      setMinutes(CountDown('Dec 16, 2022 12:00:00').minutes);
+      setSeconds(CountDown('Dec 16, 2022 12:00:00').seconds);
+    }, 1000);
+  }, [day, hours, minutes, seconds]);
+
   return (
     <div className="eventProche" style={{ backgroundImage: `url(${image})` }}>
       <div className="container">
@@ -58,7 +75,9 @@ export function EventProche({ image }) {
                   MON IDENTITE
                 </Grand_Titre>
                 <div className="countdown">
-                  <h1>30 jours 23h 23min</h1>
+                  <h1>
+                    {day} Jrs {hours} : {minutes} : {seconds}s
+                  </h1>
                 </div>
               </div>
             </div>
