@@ -6,10 +6,22 @@ export function Banniere({ data, children }) {
   const { banniereImage } = data[0];
   const [position, setPosition] = useState(-100);
 
+  const ref = useRef();
+
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', (e) => {
-        setPosition(Math.round(window.scrollY / 5.54) - 100);
+        ref.current.animate(
+          {
+            backgroundPosition: `center ${
+              Math.round(window.scrollY / 5.54) - 100
+            }px`,
+          },
+          {
+            duration: 500,
+            fill: 'forwards',
+          }
+        );
       });
     }
   }, [position]);
@@ -21,8 +33,8 @@ export function Banniere({ data, children }) {
         backgroundImage: `url(${banniereImage.url})`,
         // textShadow: '0 0 50px black',
         position: 'relative',
-        backgroundPosition: `center ${position}px`,
       }}
+      ref={ref}
     >
       <div className="container">
         <div className="banniereContent">{children}</div>

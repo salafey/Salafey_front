@@ -13,6 +13,7 @@ import Titre, {
 export default function Apropos() {
   return (
     <div>
+      <div className="vide"></div>
       <Banniere_second
         image={'https://media.graphassets.com/YZnN3sfyTDutBtshvwFP'}
       >

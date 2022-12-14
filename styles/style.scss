@@ -108,9 +108,15 @@ body {
 
 .navBar {
   height: 72px;
-  border-bottom: 1px solid silver;
+  border-bottom: 1px solid rgb(233, 233, 233);
   display: flex;
   align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: white;
 
   .container {
     display: flex;
@@ -1158,7 +1164,7 @@ footer {
       gap: 12px;
       padding: 12px 0;
       justify-content: center;
-      border: 1px solid silver;
+      border: 1px solid rgb(238, 238, 238);
       margin-top: 12px;
       border-radius: 12px;
 
@@ -1168,6 +1174,35 @@ footer {
         display: flex;
         align-items: center;
       }
+      .Partenaire_Items {
+        width: auto;
+        height: 58px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+#partenaire {
+  .eventPartenaire {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    padding: 12px 0;
+    justify-content: center;
+    margin-top: 12px;
+    border-radius: 12px;
+
+    .Partenaire_Items {
+      width: 100%;
+      padding: 12px;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgb(228, 228, 228);
+      overflow: hidden;
     }
   }
 }

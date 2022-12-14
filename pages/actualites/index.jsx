@@ -25,6 +25,7 @@ export default function Actualite({ articlesBlogs }) {
 
   return (
     <div>
+      <div className="vide"></div>
       <section className="bannierePage">
         <EventProche
           image={'https://media.graphassets.com/YZnN3sfyTDutBtshvwFP'}

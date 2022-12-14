@@ -2,8 +2,6 @@ import { useEffect, useState, useRef } from 'react';
 import Head from 'next/head';
 import { gql } from 'graphql-request';
 
-
-
 import Apropos from '../components/apropos';
 import { Banniere } from '../components/banniere';
 import { hygraph } from './api/hygraph';
@@ -30,7 +28,7 @@ export default function Home({
   // setInterval(() => {
   //   CountDown().;
   // }, 1000);
- 
+
   const handleLivre = () => {
     const result = [];
     for (let i = 0; i <= 6; i++) {
@@ -44,8 +42,11 @@ export default function Home({
 
   return (
     <>
-      <Head></Head>
+      <Head>
+        <title>SALAFEY 2022</title>
+      </Head>
       <main>
+        <div className="vide"></div>
         <Banniere data={bannierePrincipales}>
           <div className="right">
             <Grand_Titre style={{ color: 'white' }}>Salafey</Grand_Titre>

@@ -1,15 +1,33 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { image, logo } from './image';
 import Link from 'next/link';
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef();
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined ') {
+      let LastPosition = window.scrollY;
+
+      window.addEventListener('scroll', () => {
+        if (LastPosition > window.scrollY) {
+          console.log('je monte', LastPosition, window.scrollY);
+        } else {
+          console.log('je descent', LastPosition, window.scrollY);
+        }
+
+        LastPosition = window.scrollY;
+      });
+    }
+  }, [ref]);
+
   return (
-    <div className="navBar">
+    <div ref={ref} className="navBar">
       <div className="container">
         <Link href={'/'} className="logo">
           <div>
