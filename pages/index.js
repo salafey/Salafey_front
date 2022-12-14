@@ -12,7 +12,6 @@ import Titre, {
   SousTitre_1,
   Grand_Titre,
 } from '../components/titre';
-import ActusItem from '../components/actus';
 import Livre from '../components/livre';
 import Contact from '../components/contact';
 

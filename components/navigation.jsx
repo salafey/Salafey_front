@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [move, setMove] = useState(false);
   const ref = useRef();
 
   const handleClick = () => {
@@ -16,9 +17,9 @@ export default function NavBar() {
 
       window.addEventListener('scroll', () => {
         if (LastPosition > window.scrollY) {
-          console.log('je monte', LastPosition, window.scrollY);
+          setMove(true);
         } else {
-          console.log('je descent', LastPosition, window.scrollY);
+          setMove(false);
         }
 
         LastPosition = window.scrollY;
@@ -27,7 +28,7 @@ export default function NavBar() {
   }, [ref]);
 
   return (
-    <div ref={ref} className="navBar">
+    <div ref={ref} className="navBar" data-open={`${move}`}>
       <div className="container">
         <Link href={'/'} className="logo">
           <div>

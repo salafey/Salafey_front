@@ -24,14 +24,13 @@ export function Banniere({ data, children }) {
         );
       });
     }
-  }, [position]);
+  }, [position, ref]);
 
   return (
     <section
       className="banniere"
       style={{
         backgroundImage: `url(${banniereImage.url})`,
-        // textShadow: '0 0 50px black',
         position: 'relative',
       }}
       ref={ref}
@@ -43,7 +42,6 @@ export function Banniere({ data, children }) {
   );
 }
 
-// YZnN3sfyTDutBtshvwFP
 
 export function Banniere_second({ image, children }) {
   return (

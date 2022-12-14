@@ -1,10 +1,6 @@
 import { gql } from 'graphql-request';
 import Contact from '../../components/contact';
-import Titre, {
-  Grand_Titre,
-  SousTitre_1,
-  SousTitre_2,
-} from '../../components/titre';
+import Titre, { SousTitre_1, SousTitre_2 } from '../../components/titre';
 import { hygraph } from '../api/hygraph';
 
 export default function Actualite({ articlesBlogs }) {
@@ -27,13 +23,15 @@ export default function Actualite({ articlesBlogs }) {
     <div>
       <div className="vide"></div>
       <section className="bannierePage">
-        <EventProche
-          image={'https://media.graphassets.com/YZnN3sfyTDutBtshvwFP'}
-        />
+        {articlesBlogs.length === 0 ? null : (
+          <EventProche
+            image={'https://media.graphassets.com/YZnN3sfyTDutBtshvwFP'}
+          />
+        )}
       </section>
       <section className="list">
         <div className="container">
-          <SousTitre_1 style={{ marginBottom: 24 }}>
+          <SousTitre_1 style={{ margin: '24px 0' }}>
             Tous les articles
           </SousTitre_1>
         </div>
@@ -42,10 +40,14 @@ export default function Actualite({ articlesBlogs }) {
             <div
               style={{
                 width: '100%',
+                height: 200,
                 padding: 18,
                 backgroundColor: '#ededed',
                 borderRadius: 12,
                 textAlign: 'center',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
               }}
             >
               Aucun articles pour le moment

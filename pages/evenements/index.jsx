@@ -8,11 +8,21 @@ import Data from './event.json';
 import { CountDown } from '../../constantes/countdown';
 
 export default function Evenement() {
+  const ArticleListe = Data.map((el, key) => (
+    <Event
+      image={el.image}
+      titre={el.titre}
+      soustitre={el.desc}
+      publie={el.date}
+      key={key}
+    />
+  ));
+
   return (
     <div>
       <section class="bannierePage">
         <EventProche
-          image={'https://media.graphassets.com/YZnN3sfyTDutBtshvwFP'}
+          image={'https://media.graphassets.com/66aXX2RLqVRhTYuPmFqw'}
         />
       </section>
       <section>
@@ -20,15 +30,22 @@ export default function Evenement() {
           <SousTitre_1 style={{ marginBottom: 36 }}>
             Évènements passés
           </SousTitre_1>
-          {Data.map((el, key) => (
-            <Event
-              image={el.image}
-              titre={el.titre}
-              soustitre={el.desc}
-              publie={el.date}
-              key={key}
-            />
-          ))}
+          {Data.length === 0 ? (
+            <div
+              style={{
+                width: '100%',
+                height: 200,
+                padding: 18,
+                backgroundColor: '#ededed',
+                borderRadius: 12,
+                textAlign: 'center',
+              }}
+            >
+              Aucun articles pour le moment
+            </div>
+          ) : (
+            ArticleListe
+          )}
         </div>
         <Vide />
         <Contact />
