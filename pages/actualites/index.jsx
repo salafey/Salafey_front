@@ -50,7 +50,7 @@ export default function Actualite({ articlesBlogs }) {
                 justifyContent: 'center',
               }}
             >
-              Aucun articles pour le moment
+              Aucun article pour le moment
             </div>
           ) : (
             ArticleListe
