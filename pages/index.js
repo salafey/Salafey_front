@@ -49,9 +49,8 @@ export default function Home({
         <Banniere data={bannierePrincipales}>
           <div className="right">
             <Grand_Titre style={{ color: 'white' }}>Salafey</Grand_Titre>
-            <h1>2022</h1>
             <span className="soutitre">
-              SALON DU LIVRE AFRICAIN <br /> POUR ENFANTS DE YAOUNDÉ
+              SALON DU LIVRE AFRICAIN POUR ENFANTS DE YAOUNDÉ
             </span>
 
             <div className={'button'}>
@@ -205,39 +204,7 @@ export default function Home({
             </div>
           </div>
         </section>
-        {/* <section id="actus">
-          <div className="container">
-            <SousTitre_2 style={{ color: '#4E7001' }}>
-              Decouvrez notre actualite
-            </SousTitre_2>
-            <div className="flotant">
-              <div className="texte">Voir plus</div>
-              <button>
-                <svg
-                  className="fleche"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    fill="none"
-                    stroke="white"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="48"
-                    d="m268 112l144 144l-144 144m124-144H100"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div className="container Articles">
-            <ActusItem />
-            <ActusItem />
-            <ActusItem />
-            <ActusItem />
-          </div>
-        </section> */}
+
         <section id="librairie">
           <div className="container">
             <div className="left">
@@ -324,5 +291,3 @@ export async function getServerSideProps() {
     },
   };
 }
-
-// hSSVgZRyqx1qqnuwrZQx

@@ -11,8 +11,8 @@ export default function Apropos() {
             et les écoles à l'éveil, la promotion de la lecture et l'éducation
             consciente des enfants. Éveiller les enfants à la lecture, à la
             découverte culturelle et la confiance en soi en mettant à leur
-            disposition le maximum de livres, jouets, jeux aussi que tout autre
-            contenu educatif et de divertissement aui participe à construire
+            disposition le maximum de livres, jouets, jeux ainsi que tout autre
+            contenu éducatif et de divertissement aui participe à construire
             leur identité culturelle positive
           </h3>
         </div>

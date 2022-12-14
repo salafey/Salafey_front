@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [move, setMove] = useState(false);
+  const [move, setMove] = useState(true);
   const ref = useRef();
 
   const handleClick = () => {
