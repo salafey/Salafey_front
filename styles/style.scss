@@ -536,6 +536,15 @@ footer {
       margin-top: 16px;
     }
   }
+
+  .container {
+    &[data-inverse='true'] {
+      flex-direction: row-reverse;
+    }
+    &[data-inverse='false'] {
+      flex-direction: row;
+    }
+  }
 }
 
 #ambitions {

@@ -4,12 +4,10 @@ import Titre, { SousTitre_1 } from './titre';
 import { CountDown } from '../constantes/countdown';
 
 export default function EventsComponent({ inverse, image, link, children }) {
+  const inverser = inverse ? true : false;
   return (
     <div className="eventComponent">
-      <div
-        className="container"
-        style={{ flexDirection: inverse ? 'row-reverse' : 'row' }}
-      >
+      <div className="container" data-inverse={inverser}>
         <div
           className="left"
           style={{ backgroundImage: `url(${image})` }}
@@ -31,12 +29,11 @@ export default function EventsComponent({ inverse, image, link, children }) {
 
 export function SpecialEvent({ data }) {
   const { dateEvent, picture, titre } = data[data.length - 1];
-  
+
   const [day, setDay] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
-
 
   useEffect(() => {
     setInterval(() => {
@@ -77,13 +74,11 @@ export function SpecialEvent({ data }) {
 }
 
 export function EvenIntro({ inverse, image, children, color }) {
+  const inverser = inverse ? true : false;
   return (
     <section className="eventIntro">
       <div className="eventComponent">
-        <div
-          className="container"
-          style={{ flexDirection: inverse ? 'row-reverse' : 'row' }}
-        >
+        <div className="container" data-inverse={inverser}>
           <div
             className="left"
             style={{ backgroundImage: `url(${image})` }}
@@ -95,12 +90,10 @@ export function EvenIntro({ inverse, image, children, color }) {
   );
 }
 export function EventComponent_2({ inverse, image, children }) {
+  const inverser = inverse ? true : false;
   return (
     <div className="eventComponent">
-      <div
-        className="container"
-        style={{ flexDirection: inverse ? 'row-reverse' : 'row' }}
-      >
+      <div className="container" data-inverse={inverser}>
         <div
           className="left"
           style={{ backgroundImage: `url(${image})` }}
