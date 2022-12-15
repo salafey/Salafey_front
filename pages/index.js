@@ -24,10 +24,6 @@ export default function Home({
   const data1 = eventDays[eventDays.length - 1];
   const data2 = eventDays[eventDays.length - 2];
 
-  // setInterval(() => {
-  //   CountDown().;
-  // }, 1000);
-
   const handleLivre = () => {
     const result = [];
     for (let i = 0; i <= 6; i++) {
@@ -52,7 +48,10 @@ export default function Home({
             <span className="soutitre">
               SALON DU LIVRE AFRICAIN POUR ENFANTS DE YAOUNDÉ
             </span>
-
+            <h2 className="soutitre">
+              Batir une génération d'enfants Africains avec une identité
+              culturelle positive
+            </h2>
             <div className={'button'}>
               <span>Avoir plus d'Information</span>
               <button>
@@ -99,7 +98,7 @@ export default function Home({
               Notre Ambition sur le long Term
             </SousTitre_2>
             <h3>
-              Devenir un rendez-vous majeur des acteurs du livre Jeune et ses
+              Devenir un rendez-vous majeur des acteurs du livre Jeunesse et ses
               secteurs connexes en Afrique en :
             </h3>
           </div>
@@ -168,7 +167,7 @@ export default function Home({
                     <ul>
                       <li>
                         Les Maisons d'edition qui produisent la litterature
-                        jeune
+                        jeunesse
                       </li>
                       <li>
                         Les librairies, Bibliotheque et association litteraires
@@ -278,7 +277,7 @@ const QUERY = gql`
   }
 }`;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const { bannierePrincipales, eventDays, specialEvents, livres } =
     await hygraph.request(QUERY);
 

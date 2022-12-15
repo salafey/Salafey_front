@@ -149,7 +149,7 @@ export default function Apropos() {
           </h3>
         </EventComponent_2>
         <EventComponent_2
-          image={'https://media.graphassets.com/RFJKw2kVQiqsWzm2UXes'}
+          image={'https://media.graphassets.com/JvqP4ZqQUKlhizGfHNbQ'}
           inverse
         >
           <SousTitre_1>
@@ -281,11 +281,21 @@ export default function Apropos() {
           </SousTitre_1>
           <div className="grid">
             <TeamMember
-              image={'https://media.graphassets.com/FsXZQlmIR2yGOME5jzNo'}
+              image={'https://media.graphassets.com/yBpiAdbQV2Db7bYLt8JQ'}
               nom="Nadine Mekougoum"
               role={
                 'Fondatrice de l’association Harambee Africa | Les Librairies M’wina,'
               }
+            />
+            <TeamMember
+              image={'https://media.graphassets.com/RtvSG8xuSCSfYAc3JIRw'}
+              nom="Ray NDEBI"
+              role={'Coordonateur | Partenariat'}
+            />
+            <TeamMember
+              image={'https://media.graphassets.com/WVGaz53UQMaeCZpqLYxA'}
+              nom="Pauline ONGONO"
+              role={'Communication et Relation publique'}
             />
           </div>
         </div>
