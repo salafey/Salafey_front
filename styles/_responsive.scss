@@ -30,6 +30,7 @@
     text-transform: uppercase;
     line-height: 1.5rem;
     text-align: center;
+    margin-bottom: 24px;
   }
 
   .banniere {
@@ -177,25 +178,10 @@
   }
 
   #specialEvent {
-    background-color: black;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100%;
     height: auto;
     padding: 32px 0;
     position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.37);
-      z-index: 10;
-    }
 
     .container {
       height: 100%;
@@ -217,16 +203,219 @@
           color: white;
           margin: 24px 0;
         }
+      }
+    }
+  }
+
+  .tree > .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 36px;
+
+    .section {
+      flex: 1;
+      width: 90%;
+      height: 400px;
+      background-color: #fff2ed;
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .uno {
+      margin-top: 0;
+    }
+    .trees {
+      margin-top: 0;
+    }
+  }
+
+  .lePlus {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .right {
+      flex: 1;
+      padding: 28px 28px;
+      padding-bottom: 64px;
+
+      li {
+        font-size: 20px;
+        color: white;
+      }
+      li + li {
+        margin-top: 12px;
+      }
+    }
+
+    .left {
+      width: 100%;
+      aspect-ratio: 1;
+    }
+
+    .flotant {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+
+      .texte {
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: white;
+        border: none;
+        outline: none;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 5px 5px 2px #75250357;
+        }
+      }
+    }
+  }
+
+  #librairie {
+    height: auto;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 5;
+      padding: 72px 16px;
+      height: 100%;
+
+      .left {
+        width: 100%;
+        margin-bottom: 34px;
+
+        .flotant {
+          display: flex;
+          gap: 24px;
+          align-items: center;
+          margin-top: 36px;
+
+          .texte {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+          }
+
+          button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 4px solid white;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .right {
+        flex: 1;
+        height: 100%;
+        padding-left: 0px;
+      }
+    }
+  }
+
+  .contact {
+    padding: 64px 0;
+
+    .container {
+      flex-direction: column;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .left,
+    .right {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .right {
+      padding: 24px 24px;
+      min-height: 350px;
+      width: 100%;
+      border-radius: 16px;
+      background-color: #eb6128;
+
+      .champ {
+        label,
+        input {
+          display: block;
+          width: 100%;
+        }
+
+        label {
+          padding: 7px 0;
+          font-weight: 500;
+          color: white;
+        }
+
+        input {
+          padding: 10px 15px;
+          border-radius: 24px;
+          border: none;
+          background-color: #2c10032c;
+          outline: 1px solid transparent;
+          color: white;
+
+          &::placeholder {
+            color: #333;
+          }
+        }
+
+        &:has(button) {
+          margin-top: 16px;
+        }
 
         button {
-          width: 60px;
-          height: 60px;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          padding: 7px 24px;
           border: none;
-          outline: none;
+          border-radius: 24px;
+          font-weight: 600;
+        }
+      }
+
+      textarea {
+        resize: none;
+        width: 100%;
+        height: 150px;
+        padding: 10px 15px;
+        border-radius: 16px;
+        border: none;
+        background-color: #2c10032c;
+        outline: 1px solid transparent;
+        color: white;
+        transition: height 0.1s ease-in-out;
+
+        &::-webkit-scrollbar {
+          display: none;
         }
       }
     }
