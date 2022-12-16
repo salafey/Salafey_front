@@ -1,4 +1,4 @@
-import { image } from './image';
+import { image, logo } from './image';
 
 export default function Footer() {
   return (
@@ -7,7 +7,7 @@ export default function Footer() {
         <section>
           <div className="logo">
             <div>
-              <img src={image} width={'100%'} alt="salafey logo" />
+              <img src={logo} width={'100%'} alt="salafey logo" />
             </div>
           </div>
           <h5>

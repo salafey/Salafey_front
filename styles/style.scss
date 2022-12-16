@@ -174,7 +174,7 @@ footer {
       height: 100%;
 
       .logo {
-        width: 92px;
+        width: 120px;
       }
       h4 {
         text-transform: uppercase;
@@ -245,7 +245,7 @@ footer {
 
   footer {
     height: auto;
-    padding: 0;
+    padding: 24px;
 
     .container {
       display: flex;
@@ -265,7 +265,7 @@ footer {
           justify-content: center;
 
           div {
-            width: 92px;
+            width: 120px;
           }
         }
         & * {
