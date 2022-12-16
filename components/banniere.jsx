@@ -8,23 +8,23 @@ export function Banniere({ data, children }) {
 
   const ref = useRef();
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', (e) => {
-        ref.current.animate(
-          {
-            backgroundPosition: `center ${
-              Math.round(window.scrollY / 5.54) - 100
-            }px`,
-          },
-          {
-            duration: 500,
-            fill: 'forwards',
-          }
-        );
-      });
-    }
-  }, [position, ref]);
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     window.addEventListener('scroll', (e) => {
+  //       ref.current.animate(
+  //         {
+  //           backgroundPosition: `center ${
+  //             Math.round(window.scrollY / 5.54) - 100
+  //           }px`,
+  //         },
+  //         {
+  //           duration: 500,
+  //           fill: 'forwards',
+  //         }
+  //       );
+  //     });
+  //   }
+  // }, [position, ref]);
 
   return (
     <section
@@ -41,7 +41,6 @@ export function Banniere({ data, children }) {
     </section>
   );
 }
-
 
 export function Banniere_second({ image, children }) {
   return (

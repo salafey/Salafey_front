@@ -1,0 +1,110 @@
+@media (max-width: 756px) {
+  .grand-titre {
+    font-family: Kanit;
+    font-weight: 700;
+    font-size: 4rem;
+    text-transform: uppercase;
+    line-height: 5rem;
+    position: relative;
+  }
+  .titre {
+    font-family: Kanit;
+    font-weight: 700;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    line-height: 3rem;
+  }
+
+  .titre_1 {
+    font-family: Kanit;
+    font-weight: 700;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    line-height: 3rem;
+  }
+
+  .titre_2 {
+    font-family: Kanit;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    line-height: 3rem;
+  }
+
+  .banniere {
+    height: calc(100vh - 72px);
+    background-size: cover;
+    background-attachment: local;
+    background-position: center;
+    transition: all 0.01s ease;
+
+    .container {
+      display: flex;
+      height: 100%;
+      padding: 16px;
+      align-items: flex-end;
+    }
+
+   
+
+    .banniereContent {
+      width: 100%;
+      position: relative;
+      z-index: 10;
+
+      h3 {
+        font-size: 1.5rem;
+        margin-top: 3rem;
+        line-height: 2.4rem;
+        color: white;
+        // text-shadow: 0 0 50px black;
+      }
+
+      .right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h1 {
+          font-size: 3rem;
+          color: white;
+          margin: 0;
+        }
+
+        .button {
+          display: flex;
+          align-items: center;
+          gap: 18px;
+
+          & > span {
+            font-weight: 500;
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            flex: 1;
+          }
+        }
+
+        button {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: none;
+          outline: none;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &.second {
+      &::after {
+        background-color: rgba(0, 0, 0, 0.562);
+        z-index: 5;
+      }
+    }
+  }
+}

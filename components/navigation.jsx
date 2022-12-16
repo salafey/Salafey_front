@@ -56,9 +56,6 @@ export default function NavBar() {
         </div>
         <nav data-open={isOpen} className="navbarReduct">
           <div className="navbarVertical">
-            <Link href={'/objectif'} className="menuElement">
-              Objectif
-            </Link>
             <Link href={'/a_propos'} className="menuElement">
               A Propos de nous
             </Link>

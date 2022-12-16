@@ -236,6 +236,7 @@ footer {
           .menuElement {
             text-align: right;
             padding: 7px 0;
+            display: block;
           }
         }
       }
@@ -296,7 +297,6 @@ footer {
   background-size: cover;
   background-attachment: local;
   transition: all 0.01s ease;
-  animation: scrollEvent 0.001s fade;
 
   .container {
     display: flex;
@@ -1284,3 +1284,5 @@ footer {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
+
+@import 'responsive';
