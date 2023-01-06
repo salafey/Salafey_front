@@ -39,6 +39,44 @@ export default function Home({
     <>
       <Head>
         <title>SALAFEY 2022</title>
+        <meta
+          name="title"
+          content="SALAFEY - Le Salon du Livre Africain pour les Enfants de Yaoundé"
+        />
+        <meta
+          name="description"
+          content="le SALAFEY a pour objectif de bâtir une génération d'enfants Africains avec une identité culturelle positive. Sensibiliser, impliquer et accompagner les parents, les éducateurs et les écoles à l'éveil, la promotion de la lecture et l'éducation consciente des enfants. Éveiller les enfants à la lecture, à la découverte culturelle et la confiance en soi en mettant à leur disposition le maximum de livres, jouets, jeux ainsi que tout autre contenu éducatif et de divertissement qui participe à construire leur identité culturelle positive"
+        />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://metatags.io/" />
+        <meta
+          property="og:title"
+          content="SALAFEY - Le Salon du Livre Africain pour les Enfants de Yaoundé"
+        />
+        <meta
+          property="og:description"
+          content="le SALAFEY a pour objectif de bâtir une génération d'enfants Africains avec une identité culturelle positive. Sensibiliser, impliquer et accompagner les parents, les éducateurs et les écoles à l'éveil, la promotion de la lecture et l'éducation consciente des enfants. Éveiller les enfants à la lecture, à la découverte culturelle et la confiance en soi en mettant à leur disposition le maximum de livres, jouets, jeux ainsi que tout autre contenu éducatif et de divertissement qui participe à construire leur identité culturelle positive"
+        />
+        <meta
+          property="og:image"
+          content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
+        />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta
+          property="twitter:title"
+          content="SALAFEY - Le Salon du Livre Africain pour les Enfants de Yaoundé"
+        />
+        <meta
+          property="twitter:description"
+          content="le SALAFEY a pour objectif de bâtir une génération d'enfants Africains avec une identité culturelle positive. Sensibiliser, impliquer et accompagner les parents, les éducateurs et les écoles à l'éveil, la promotion de la lecture et l'éducation consciente des enfants. Éveiller les enfants à la lecture, à la découverte culturelle et la confiance en soi en mettant à leur disposition le maximum de livres, jouets, jeux ainsi que tout autre contenu éducatif et de divertissement qui participe à construire leur identité culturelle positive"
+        />
+        <meta
+          property="twitter:image"
+          content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
+        />
       </Head>
       <main>
         <div className="vide"></div>

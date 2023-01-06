@@ -1285,4 +1285,18 @@ footer {
   gap: 24px;
 }
 
+.button {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 12px 0;
+
+  & > span {
+    font-weight: 500;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
 @import 'responsive';

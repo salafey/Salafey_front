@@ -1,0 +1,12 @@
+.button {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  & > span {
+    font-weight: 500;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+  }
+}

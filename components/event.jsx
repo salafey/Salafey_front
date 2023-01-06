@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Bouton } from './bouton';
+import { Bouton, PrincipalBouton } from './bouton';
 import Titre, { SousTitre_1 } from './titre';
 import { CountDown } from '../constantes/countdown';
 
@@ -27,7 +27,7 @@ export default function EventsComponent({ inverse, image, link, children }) {
   );
 }
 
-export function SpecialEvent({ data }) {
+export function SpecialEvent({ data, href }) {
   const { dateEvent, picture, titre } = data[data.length - 1];
 
   const [day, setDay] = useState(0);
@@ -51,22 +51,14 @@ export function SpecialEvent({ data }) {
     >
       <div className="container">
         <div className="right">
-          <Titre style={{ color: 'white', textAlign: 'right' }}>{titre} </Titre>
-          <h1>
-            {day} Jrs {hours} : {minutes} : {seconds}s
-          </h1>
-          <button>
-            <svg width="32" height="32" viewBox="0 0 512 512">
-              <path
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="48"
-                d="m268 112l144 144l-144 144m124-144H100"
-              />
-            </svg>
-          </button>
+          <Titre style={{ color: 'white', textAlign: 'right' }}>
+            Revivez <br />
+            le Salon du livre <br />
+            Salafey 2022 <br />
+            en image
+          </Titre>
+
+          <PrincipalBouton />
         </div>
       </div>
     </section>

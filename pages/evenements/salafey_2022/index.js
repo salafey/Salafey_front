@@ -1,7 +1,7 @@
 export default function Ville() {
   return (
     <div>
-      <div>Je suis dans la ville de Yaounde </div>
+      <div>Salafey 2022 </div>
     </div>
   );
 }
