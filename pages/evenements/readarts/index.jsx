@@ -7,7 +7,7 @@ export default function EventArticle() {
   return (
     <div>
       <div className="vide"></div>
-      <Banniere />
+      <Banniere url={'https://media.graphassets.com/MS1uDmeARzC90ZNodidP'} />
       <div className="container">
         <Paragraph>
           <Titre style={{ marginBottom: 24 }}>LES ATELIERS READ'ARTS</Titre>

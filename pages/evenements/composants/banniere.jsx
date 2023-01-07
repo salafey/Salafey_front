@@ -1,11 +1,11 @@
-export default function Banniere() {
+export default function Banniere({ url }) {
   return (
     <section className="page article banniere">
       <div className="container">
         <div
           className="diapos"
           style={{
-            backgroundImage: `url(https://media.graphassets.com/MS1uDmeARzC90ZNodidP)`,
+            backgroundImage: `url(${url})`,
           }}
         ></div>
       </div>
