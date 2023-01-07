@@ -1,7 +1,7 @@
 export default function Titre({ children, style }) {
   return (
     <>
-      <div style={{ ...style }} className="titre">
+      <div style={style} className="titre">
         {children}
       </div>
     </>

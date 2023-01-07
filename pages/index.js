@@ -116,7 +116,10 @@ export default function Home({
               Quelques unes de nos Activités
             </SousTitre_2>
           </div>
-          <EventsComponent link={'/'} image={data1.eventPicture.url}>
+          <EventsComponent
+            link={'/evenements/readarts'}
+            image={data1.eventPicture.url}
+          >
             <SousTitre_1>{data1.eventTitle}</SousTitre_1>
             <p>{data1.description[0]}</p>
           </EventsComponent>
