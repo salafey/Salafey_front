@@ -14,6 +14,7 @@ import Titre, {
 } from '../components/titre';
 import Livre from '../components/livre';
 import Contact from '../components/contact';
+import Telecharger from './evenements/composants/telecharger';
 
 export default function Home({
   bannierePrincipales,
@@ -86,11 +87,11 @@ export default function Home({
             <span className="soutitre">
               SALON DU LIVRE AFRICAIN POUR ENFANTS DE YAOUNDÉ
             </span>
-            <h2 className="soutitre">
+            <h2 style={{ fontSize: 24, color: 'white' }}>
               Batir une génération d'enfants Africains avec une identité
               culturelle positive
             </h2>
-            <div className={'button'}>
+            {/* <div className={'button'}>
               <span>Avoir plus d'Information</span>
               <button>
                 <svg width="32" height="32" viewBox="0 0 512 512">
@@ -104,9 +105,10 @@ export default function Home({
                   />
                 </svg>
               </button>
-            </div>
+            </div> */}
           </div>
         </Banniere>
+        <Telecharger url="https://media.graphassets.com/RVQr8qpSi62xJoWqZg1M" href = "https://media.graphassets.com/MxEQJJvzRDqKLycz44b1" />
         <section>
           <Apropos />
         </section>
@@ -125,7 +127,7 @@ export default function Home({
           </EventsComponent>
           <EventsComponent
             inverse
-            link={'/evenements/ville'}
+            link={'/evenements/faandoudeftere'}
             image={data2.eventPicture.url}
           >
             <SousTitre_1>{data2.eventTitle}</SousTitre_1>

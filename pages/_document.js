@@ -10,10 +10,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="fr">
         <Head />
-        <head>
-
-
-        </head>
         <body>
           <Main />
           <NextScript />

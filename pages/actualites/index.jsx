@@ -22,13 +22,13 @@ export default function Actualite({ articlesBlogs }) {
   return (
     <div>
       <div className="vide"></div>
-      <section className="bannierePage">
+      {/* <section className="bannierePage">
         {articlesBlogs.length === 0 ? null : (
           <EventProche
             image={'https://media.graphassets.com/YZnN3sfyTDutBtshvwFP'}
           />
         )}
-      </section>
+      </section> */}
       <section className="list">
         <div className="container">
           <SousTitre_1 style={{ margin: '24px 0' }}>
@@ -121,7 +121,7 @@ function ArticleItems({ image, titre, publier, id }) {
         }}
       ></div>
       <div className="desc">
-        <SousTitre_2>{titre}</SousTitre_2>
+        <SousTitre_2 style={{ lineHeight: '24px' }}>{titre}</SousTitre_2>
         <span>Publié le : {FormatDate()}</span>
       </div>
     </div>

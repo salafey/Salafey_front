@@ -14,6 +14,7 @@ export default function Evenement() {
       titre={el.titre}
       soustitre={el.desc}
       publie={el.date}
+      url={el.url}
       key={key}
     />
   ));
@@ -22,7 +23,7 @@ export default function Evenement() {
     <div>
       <section class="bannierePage">
         <EventProche
-          image={'https://media.graphassets.com/66aXX2RLqVRhTYuPmFqw'}
+          image={'https://media.graphassets.com/8cGoCZsERSq3Qw9SBR3S'}
         />
       </section>
       <section>
@@ -62,10 +63,10 @@ export function EventProche({ image }) {
 
   useEffect(() => {
     setInterval(() => {
-      setDay(CountDown('Dec 16, 2022 12:00:00').day);
-      setHours(CountDown('Dec 16, 2022 12:00:00').hours);
-      setMinutes(CountDown('Dec 16, 2022 12:00:00').minutes);
-      setSeconds(CountDown('Dec 16, 2022 12:00:00').seconds);
+      setDay(CountDown('Feb 7, 2023 12:00:00').day);
+      setHours(CountDown('Feb 7, 2023 12:00:00').hours);
+      setMinutes(CountDown('Feb 7, 2023 12:00:00').minutes);
+      setSeconds(CountDown('Feb 7, 2023 12:00:00').seconds);
     }, 1000);
   }, [day, hours, minutes, seconds]);
 
@@ -82,19 +83,10 @@ export function EventProche({ image }) {
             <div className="content">
               <div>
                 <div className="left">
-                  <div className="logo">
-                    <div>
-                      <img
-                        src="https://media.graphassets.com/7lPj4Z0TsyMsaS7eS8UQ"
-                        alt="salafey logo"
-                        width="100%"
-                      />
-                    </div>
-                  </div>
-                  <Grand_Titre style={{ color: 'white' }}>
-                    <span className="theme">theme</span>
-                    MON IDENTITE
-                  </Grand_Titre>
+                  <Titre style={{ color: 'white' }}>
+                    <span className="theme">BAfoussam</span>
+                    LE SALAFEY EN CARAVANE
+                  </Titre>
                   <div className="countdown">
                     <h1>
                       {day} Jrs {hours} : {minutes} : {seconds}s
@@ -105,27 +97,13 @@ export function EventProche({ image }) {
             </div>
           </div>
           <div className="eventPartenaire">
-            <Partenaire image="https://media.graphassets.com/Uwx83KHzRr2Wyy1lGtHT" />
-            <Partenaire image="https://media.graphassets.com/TqlYYmRb7RwhPna3gcbl" />
-            <Partenaire image="https://media.graphassets.com/Dk2qBDcaSmmQDZHnvx86" />
-            <Partenaire image="https://media.graphassets.com/YHuLDEhFT5KAZE3jd7kV" />
-            <Partenaire image="https://media.graphassets.com/BH4FaQanTH2KpcKxkMDo" />
-            <Partenaire image="https://media.graphassets.com/gPmTk3TWQuWHRsbPsX7b" />
-            <Partenaire image="https://media.graphassets.com/cchvxSOYQ1mKZ4TzL8k2" />
-            <Partenaire image="https://media.graphassets.com/hDwngxoATfiI11EBXJsl" />
-            <Partenaire image="https://media.graphassets.com/LOjdyDaHQXyUN76bLmkg" />
+            <Partenaire image="https://media.graphassets.com/KZ2gR6rQw29kb2HQlY5j" />
+            <Partenaire image="https://media.graphassets.com/QcrLBsL4Qae7kCgknhLG" />
+            <Partenaire image="https://media.graphassets.com/bLuHMXtwQSuN3qXJrj7A" />
+            <Partenaire image="https://media.graphassets.com/AsUAhGdgSmmW09axTjh8" />
+            <Partenaire image="https://media.graphassets.com/3lS4080gQxCUxtUrfarZ" />
             <Partenaire image="https://media.graphassets.com/PpFZZ5Z3Sk6E2qN0RRVL" />
-            <Partenaire image="https://media.graphassets.com/IKjhcmN8ROCrXsZoGJgV" />
-            <Partenaire image="https://media.graphassets.com/Q2XF0dOoTpi60hhfaygd" />
             <Partenaire image="https://media.graphassets.com/ceyhHraRUOhs78VZSKfU" />
-            <Partenaire image="https://media.graphassets.com/fHtdF07QQ6hL2irq1QOv" />
-            <Partenaire image="https://media.graphassets.com/fhvS9jQ6Q76HAPh0CVm5" />
-            <Partenaire image="https://media.graphassets.com/hEqis1oQKSVvhaLzphWA" />
-            <Partenaire image="https://media.graphassets.com/xenbl93QGOlKIpe8TMVJ" />
-            <Partenaire image="https://media.graphassets.com/aFOmhaPIRVeskrgwdTuw" />
-            <Partenaire image="https://media.graphassets.com/BWNpDz4RQiShi5KtCRri" />
-            <Partenaire image="https://media.graphassets.com/39oYbp6TE5bBoLgoeNQQ" />
-            <Partenaire image="https://media.graphassets.com/NTX9yPLxQt2laaTHSs9F" />
           </div>
         </div>
       </div>

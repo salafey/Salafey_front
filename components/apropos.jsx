@@ -12,7 +12,7 @@ export default function Apropos() {
             consciente des enfants. Éveiller les enfants à la lecture, à la
             découverte culturelle et la confiance en soi en mettant à leur
             disposition le maximum de livres, jouets, jeux ainsi que tout autre
-            contenu éducatif et de divertissement aui participe à construire
+            contenu éducatif et de divertissement qui participe à construire
             leur identité culturelle positive
           </h3>
         </div>

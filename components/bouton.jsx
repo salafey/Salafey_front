@@ -30,7 +30,7 @@ export const Bouton = ({ href, titre, style }) => {
           <svg width="32" height="32" viewBox="0 0 512 512">
             <path
               fill="none"
-              stroke="currentColor"
+              stroke="white"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="48"
@@ -58,22 +58,24 @@ export const Bouton = ({ href, titre, style }) => {
           </button> */
 }
 
-export function PrincipalBouton() {
+export function PrincipalBouton({ href }) {
   return (
-    <div className={'button'}>
-      <span>Voire plus</span>
-      <button>
-        <svg width="32" height="32" viewBox="0 0 512 512">
-          <path
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="48"
-            d="m268 112l144 144l-144 144m124-144H100"
-          />
-        </svg>
-      </button>
-    </div>
+    <Link href={href}>
+      <div className={'button'}>
+        <span>Voire plus</span>
+        <button>
+          <svg width="32" height="32" viewBox="0 0 512 512">
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="48"
+              d="m268 112l144 144l-144 144m124-144H100"
+            />
+          </svg>
+        </button>
+      </div>
+    </Link>
   );
 }

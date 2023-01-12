@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Bouton, PrincipalBouton } from './bouton';
 import Titre, { SousTitre_1 } from './titre';
 import { CountDown } from '../constantes/countdown';
+import Link from 'next/link';
 
 export default function EventsComponent({ inverse, image, link, children }) {
   const inverser = inverse ? true : false;
@@ -16,7 +17,11 @@ export default function EventsComponent({ inverse, image, link, children }) {
           {children}
           <div style={{ marginTop: 36 }}>
             <Bouton
-              style={{ backgroundColor: '#4E7001', color: 'white' }}
+              style={{
+                backgroundColor: '#4E7001',
+                color: 'white',
+                borderRadius: '50px',
+              }}
               titre={'Lire plus'}
               href={link}
             />
@@ -58,7 +63,7 @@ export function SpecialEvent({ data, href }) {
             en image
           </Titre>
 
-          <PrincipalBouton />
+          <PrincipalBouton href="/evenements/salafey_2022" />
         </div>
       </div>
     </section>
@@ -96,20 +101,24 @@ export function EventComponent_2({ inverse, image, children }) {
   );
 }
 
-export function Event({ image, titre, soustitre, publie }) {
+export function Event({ image, titre, soustitre, url = '/' }) {
+  const shut =
+    soustitre.length <= 250 ? soustitre : `${soustitre.slice(0, 256)} ...`;
+
   return (
-    <div className="eventItems" onClick={() => console.log('je fonctionne')}>
-      <div
-        className="left"
-        style={{
-          backgroundImage: `url(https://media.graphassets.com/${image})`,
-        }}
-      ></div>
-      <div className="right">
-        <SousTitre_1>{titre}</SousTitre_1>
-        <p>{soustitre}</p>
-        <span>{publie}</span>
+    <Link href={url}>
+      <div className="eventItems">
+        <div
+          className="left"
+          style={{
+            backgroundImage: `url(https://media.graphassets.com/${image})`,
+          }}
+        ></div>
+        <div className="right">
+          <SousTitre_1>{titre}</SousTitre_1>
+          <p>{shut}</p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
