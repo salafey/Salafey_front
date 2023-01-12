@@ -3,7 +3,7 @@ import Paragraph from '../../../components/paragraph';
 import Titre from '../../../components/titre';
 import Banniere from '../composants/banniere';
 
-import gallerie from './gallerie.json';
+import gallerie  from './gallerie.js';
 
 export default function EventArticle() {
   const Element = gallerie.map((el) => (
