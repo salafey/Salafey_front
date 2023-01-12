@@ -1,4 +1,4 @@
-export default [
+export const data = [
   {
     "id": 1,
     "image": "https://media.graphassets.com/oj4Tn0CQS2WEtuMMfr2r"

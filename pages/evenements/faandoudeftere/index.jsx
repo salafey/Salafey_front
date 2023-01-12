@@ -3,10 +3,10 @@ import Paragraph from '../../../components/paragraph';
 import Titre from '../../../components/titre';
 import Banniere from '../composants/banniere';
 
-import gallerie  from './gallerie.js';
+import {data}  from './gallerie.js';
 
 export default function EventArticle() {
-  const Element = gallerie.map((el) => (
+  const Element = data.map((el) => (
     <div
       className="items-grid"
       style={{ backgroundImage: `url(${el.image})` }}
